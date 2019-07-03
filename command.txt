@@ -1,2 +1,8 @@
 pip3 freeze > requirements.txt
 pip3 install -r requirements.txt
+
+python3 -m venv venv
+. venv/bin/activate
+pip3 install -r requirements.txt
+
+sudo docker build -t cloudweb:latest .

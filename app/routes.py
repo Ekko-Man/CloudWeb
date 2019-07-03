@@ -3,7 +3,7 @@ from flask import render_template, flash, redirect, url_for
 from app.forms import RegistrationForm
 import boto3
 
-dynamodb = boto3.client('dynamodb')
+dynamodb = boto3.client('dynamodb',region_name = 'us-east-1')
 
 
 @app.route('/', methods=['GET', 'POST'])
